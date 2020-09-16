@@ -6,5 +6,43 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  // outline: 2px solid teal;
+  outline: 2px solid teal;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  /* outline: 5px solid firebrick; */
+
+  // @include for-size(tablet-portrait) {
+  //   width: 480px;
+  // }
+
+  // @include for-size(tablet-landscape) {
+  //   width: 768px;
+  // }
+
+  // @include for-size(desktop) {
+  //   width: 1200px;
+  // }
 }
