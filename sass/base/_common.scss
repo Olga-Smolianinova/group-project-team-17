@@ -28,21 +28,25 @@ img {
 }
 .container {
   width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-right: auto;
   margin-left: auto;
   /* outline: 5px solid firebrick; */
 
-  // @include for-size(tablet-portrait) {
-  //   width: 480px;
-  // }
+  @include for-size(tablet-portrait) {
+    width: 480px;
+  }
 
-  // @include for-size(tablet-landscape) {
-  //   width: 768px;
-  // }
+  @include for-size(tablet-landscape) {
+    width: 768px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 
-  // @include for-size(desktop) {
-  //   width: 1200px;
-  // }
+  @include for-size(desktop) {
+    width: 1280px;
+    padding-left: 295px;
+    padding-right: 295px;
+  }
 }

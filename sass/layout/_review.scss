@@ -1,10 +1,10 @@
 .section {
   padding-top: 50px;
   padding-bottom: 50px;
-  background: #ffffff;
+  background: $primary-white-color;
 }
 .section-title {
-  margin: 0;
+  margin: 0 0 20px;
 
   font-weight: 800;
   font-size: 20px;
@@ -12,7 +12,14 @@
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: #111518;
+  color: $primary-text-color;
+
+  @include for-size(tablet-landscape) {
+    margin: 0 0 30px;
+  }
+  @include for-size(desktop) {
+    margin: 0 0 50px;
+  }
 }
 
 // Отзывы
@@ -21,50 +28,103 @@
   text-align: center;
 }
 
-// .review-set {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
-// .review-picture {
+.review-set {
+  overflow: hidden;
+  display: flex;
 
-// }
-// .review-sign {
-// }
+  @include for-size(tablet-landscape) {
+    display: flex;
+    overflow: hidden;
+  }
+  @include for-size(desktop) {
+    display: flex;
+    overflow: hidden;
+  }
+}
+
+.review-element {
+  min-width: 100%;
+
+  @include for-size(tablet-landscape) {
+    display: flex;
+    // justify-content: center;
+    // min-width: 768px;
+  }
+}
+.review-picture {
+  margin-top: 20px;
+  margin-right: 20px;
+
+  @include for-size(tablet-landscape) {
+    margin-top: 40px;
+    margin-right: 20px;
+  }
+  img {
+    min-width: 150px;
+    margin-bottom: 20px;
+  }
+  @include for-size(desktop) {
+    margin-top: 50px;
+  }
+}
+
+.review-sign {
+  margin: 20px 20px 30px;
+
+  @include for-size(tablet-landscape) {
+    margin: 40px 27px 40px;
+    text-align: left;
+  }
+  @include for-size(desktop) {
+    margin: 50px 20px 50px 20px;
+  }
+}
 
 .review-title {
-  margin: 0;
+  margin: 0 0 10px;
 
   font-weight: 800;
   font-size: 14px;
   line-height: 1.21;
   letter-spacing: 0.08em;
 
-  color: #ff6b09;
+  color: $accent-color;
+
+  @include for-size(tablet-landscape) {
+    margin: 0 0 20px;
+  }
+  @include for-size(desktop) {
+    margin: 0 0 10px;
+  }
 }
 .review-title-sign {
-  margin: 0;
+  margin: 0 0 10px;
 
   font-weight: 500;
   font-size: 12px;
   line-height: 1.15;
   letter-spacing: 0.08em;
 
-  color: #b9b9b9;
+  color: $informacion-text-color;
+
+  @include for-size(tablet-landscape) {
+    margin: 0 0 20px;
+  }
 }
 .review-text {
-  margin: 0;
+  // margin: 0;
 
   font-weight: 500;
   font-size: 12px;
   line-height: 1.67;
 
-  color: #3d3d3d;
+  color: $secondary-text-color;
 }
 .review-btn {
   border: none;
   text-decoration: underline;
-  color: #ff6b09;
-  background-color: #ffffff;
+  color: $accent-color;
+  background-color: $primary-white-color;
 }
 // .review-icon {
 //   display: block;
@@ -72,6 +132,40 @@
 
 // Аватарки
 .avatars {
+  overflow: hidden;
+  height: 74px;
+  max-width: 190px;
+  margin: auto;
+
+  @include for-size(tablet-landscape) {
+    overflow: visible;
+    height: auto;
+    max-width: 100%;
+  }
+}
+.avatars-set {
   display: flex;
+  flex-wrap: wrap;
+  // justify-content: center;
+
   margin-top: 20px;
+  margin-right: -10px;
+
+  @include for-size(tablet-landscape) {
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  @include for-size(desktop) {
+    justify-content: center;
+  }
+}
+.avatars-element {
+  // width: calc((100% - 3 * 10px) / 3);
+  margin-right: 10px;
+
+  @include for-size(tablet-landscape) {
+    margin-right: 20px;
+  }
 }
