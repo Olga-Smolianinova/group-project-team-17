@@ -6,10 +6,16 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline: 2px solid teal;
+  // outline: 2px solid teal;
 }
 body {
+  margin: 0;
+
   font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.08em;
+
+  color: $primary-text-color;
+  background: $primary-white-color;
 }
 
 a {
@@ -19,7 +25,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 0 auto;
 }
 .list {
   list-style: none;
@@ -27,17 +32,11 @@ img {
   padding: 0;
 }
 .container {
-  position: relative;
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
   margin-right: auto;
   margin-left: auto;
-  /* outline: 5px solid firebrick; */
-
-  @include for-size(tablet-portrait) {
-    width: 480px;
-  }
 
   @include for-size(tablet-landscape) {
     width: 768px;
@@ -46,8 +45,8 @@ img {
   }
 
   @include for-size(desktop) {
-    width: 1280px;
-    padding-left: 295px;
-    padding-right: 295px;
+    width: 1354px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }

@@ -1,7 +1,6 @@
 .section {
   padding-top: 50px;
   padding-bottom: 50px;
-  background: $primary-white-color;
 }
 .section-title {
   margin: 0 0 20px;
@@ -12,8 +11,6 @@
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: $primary-text-color;
-
   @include for-size(tablet-landscape) {
     margin: 0 0 30px;
   }
@@ -23,6 +20,14 @@
 }
 
 // Отзывы
+.review {
+  position: relative;
+
+  @include for-size(desktop) {
+    padding-right: 270px;
+    padding-left: 270px;
+  }
+}
 .review-container {
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
   text-align: center;
@@ -47,8 +52,6 @@
 
   @include for-size(tablet-landscape) {
     display: flex;
-    // justify-content: center;
-    // min-width: 768px;
   }
 }
 .review-picture {
@@ -62,14 +65,18 @@
   img {
     min-width: 150px;
     margin-bottom: 20px;
+    margin: 0 auto;
   }
   @include for-size(desktop) {
     margin-top: 50px;
   }
 }
 .review-icon {
-  fill: $accent-color;
-  &:hover {
+  fill: #436eab;
+  &:hover,
+  &:focus {
+    transform: scale(1);
+    transition: transform 300ms $timing-function;
     fill: $accent-color;
   }
 }
@@ -92,7 +99,6 @@
   font-weight: 800;
   font-size: 14px;
   line-height: 1.21;
-  letter-spacing: 0.08em;
 
   color: $accent-color;
 
@@ -109,7 +115,6 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.15;
-  letter-spacing: 0.08em;
 
   color: $informacion-text-color;
 
@@ -129,6 +134,12 @@
   text-decoration: underline;
   color: $accent-color;
   background-color: $primary-white-color;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 300ms $timing-function;
+    text-decoration: none;
+  }
 }
 
 // Аватарки
@@ -150,6 +161,11 @@
   border: none;
   background-color: inherit;
   bottom: 10px;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 300ms $timing-function;
+  }
 }
 .left {
   left: 20px;
@@ -200,5 +216,9 @@
 
   @include for-size(tablet-landscape) {
     margin-right: 20px;
+  }
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 300ms $timing-function;
   }
 }
