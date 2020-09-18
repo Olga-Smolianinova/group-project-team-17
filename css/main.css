@@ -351,6 +351,7 @@ html {
 *::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  outline: 2px solid teal;
 }
 
 body {
@@ -375,6 +376,7 @@ img {
 }
 
 .container {
+  position: relative;
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
@@ -499,6 +501,14 @@ img {
   }
 }
 
+.review-icon {
+  fill: #ff6b09;
+}
+
+.review-icon:hover {
+  fill: #ff6b09;
+}
+
 .review-sign {
   margin: 20px 20px 30px;
 }
@@ -581,6 +591,49 @@ img {
   }
 }
 
+.avatars-btn {
+  position: absolute;
+  border: none;
+  background-color: inherit;
+  bottom: 10px;
+}
+
+.left {
+  left: 20px;
+}
+
+@media (min-width: 768px) {
+  .left {
+    top: 50%;
+    bottom: 50%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .left {
+    left: 150px;
+    top: 50%;
+    bottom: 50%;
+  }
+}
+
+.right {
+  right: 20px;
+}
+
+@media (min-width: 768px) {
+  .right {
+    top: 50%;
+    bottom: 50%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .right {
+    right: 150px;
+  }
+}
+
 .avatars-set {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -611,6 +664,7 @@ img {
 }
 
 .avatars-element {
+  width: calc((100% - 3 * 10px) / 3);
   margin-right: 10px;
 }
 

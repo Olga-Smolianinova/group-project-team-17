@@ -6,7 +6,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  // outline: 2px solid teal;
+  outline: 2px solid teal;
 }
 body {
   font-family: "Montserrat", sans-serif;
@@ -27,6 +27,7 @@ img {
   padding: 0;
 }
 .container {
+  position: relative;
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;

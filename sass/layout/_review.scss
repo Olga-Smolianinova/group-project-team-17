@@ -67,6 +67,12 @@
     margin-top: 50px;
   }
 }
+.review-icon {
+  fill: $accent-color;
+  &:hover {
+    fill: $accent-color;
+  }
+}
 
 .review-sign {
   margin: 20px 20px 30px;
@@ -112,8 +118,6 @@
   }
 }
 .review-text {
-  // margin: 0;
-
   font-weight: 500;
   font-size: 12px;
   line-height: 1.67;
@@ -126,9 +130,6 @@
   color: $accent-color;
   background-color: $primary-white-color;
 }
-// .review-icon {
-//   display: block;
-// }
 
 // Аватарки
 .avatars {
@@ -143,6 +144,38 @@
     max-width: 100%;
   }
 }
+// Стрелка
+.avatars-btn {
+  position: absolute;
+  border: none;
+  background-color: inherit;
+  bottom: 10px;
+}
+.left {
+  left: 20px;
+
+  @include for-size(tablet-landscape) {
+    top: 50%;
+    bottom: 50%;
+  }
+  @include for-size(desktop) {
+    left: 150px;
+    top: 50%;
+    bottom: 50%;
+  }
+}
+.right {
+  right: 20px;
+
+  @include for-size(tablet-landscape) {
+    top: 50%;
+    bottom: 50%;
+  }
+  @include for-size(desktop) {
+    right: 150px;
+  }
+}
+
 .avatars-set {
   display: flex;
   flex-wrap: wrap;
@@ -162,7 +195,7 @@
   }
 }
 .avatars-element {
-  // width: calc((100% - 3 * 10px) / 3);
+  width: calc((100% - 3 * 10px) / 3);
   margin-right: 10px;
 
   @include for-size(tablet-landscape) {
