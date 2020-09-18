@@ -500,8 +500,7 @@ img {
 
 .review-picture img {
   min-width: 150px;
-  margin-bottom: 20px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 
 @media (min-width: 1354px) {
