@@ -138,20 +138,8 @@
     text-decoration: none;
   }
 }
+// // Аватарки c display:none
 
-// Аватарки
-.avatars {
-  overflow: hidden;
-  height: 74px;
-  max-width: 190px;
-  margin: auto;
-
-  @include for-size(tablet-landscape) {
-    overflow: visible;
-    height: auto;
-    max-width: 100%;
-  }
-}
 // Стрелка
 .avatars-btn {
   position: absolute;
@@ -189,26 +177,27 @@
   }
 }
 
+.display {
+  display: none;
+
+  @include for-size(tablet-landscape) {
+    display: block;
+  }
+}
+
 .avatars-set {
   display: flex;
-  flex-wrap: wrap;
-  // justify-content: center;
+  justify-content: center;
 
   margin-top: 20px;
   margin-right: -10px;
 
   @include for-size(tablet-landscape) {
-    flex-wrap: nowrap;
     justify-content: center;
     margin-right: 0;
   }
-
-  @include for-size(desktop) {
-    justify-content: center;
-  }
 }
 .avatars-element {
-  width: calc((100% - 3 * 10px) / 3);
   margin-right: 10px;
 
   @include for-size(tablet-landscape) {
@@ -219,3 +208,84 @@
     transition: transform 300ms $timing-function;
   }
 }
+
+// // Аватарки c overflow
+// .avatars {
+//   overflow: hidden;
+//   height: 74px;
+//   max-width: 190px;
+//   margin: auto;
+
+//   @include for-size(tablet-landscape) {
+//     overflow: visible;
+//     height: auto;
+//     max-width: 100%;
+//   }
+// }
+// // Стрелка
+// .avatars-btn {
+//   position: absolute;
+//   border: none;
+//   background-color: inherit;
+//   bottom: 10px;
+
+//   &:hover {
+//     transform: scale(1.1);
+//     transition: transform 300ms $timing-function;
+//   }
+// }
+// .left {
+//   left: 20px;
+
+//   @include for-size(tablet-landscape) {
+//     top: 50%;
+//     bottom: 50%;
+//   }
+//   @include for-size(desktop) {
+//     left: 150px;
+//     top: 50%;
+//     bottom: 50%;
+//   }
+// }
+// .right {
+//   right: 20px;
+
+//   @include for-size(tablet-landscape) {
+//     top: 50%;
+//     bottom: 50%;
+//   }
+//   @include for-size(desktop) {
+//     right: 150px;
+//   }
+// }
+
+// .avatars-set {
+//   display: flex;
+//   flex-wrap: wrap;
+//   // justify-content: center;
+
+//   margin-top: 20px;
+//   margin-right: -10px;
+
+//   @include for-size(tablet-landscape) {
+//     flex-wrap: nowrap;
+//     justify-content: center;
+//     margin-right: 0;
+//   }
+
+//   @include for-size(desktop) {
+//     justify-content: center;
+//   }
+// }
+// .avatars-element {
+//   width: calc((100% - 3 * 10px) / 3);
+//   margin-right: 10px;
+
+//   @include for-size(tablet-landscape) {
+//     margin-right: 20px;
+//   }
+//   &:hover {
+//     transform: scale(1.1);
+//     transition: transform 300ms $timing-function;
+//   }
+// }

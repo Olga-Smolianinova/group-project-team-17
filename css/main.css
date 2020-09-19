@@ -598,21 +598,6 @@ img {
   text-decoration: none;
 }
 
-.avatars {
-  overflow: hidden;
-  height: 74px;
-  max-width: 190px;
-  margin: auto;
-}
-
-@media (min-width: 768px) {
-  .avatars {
-    overflow: visible;
-    height: auto;
-    max-width: 100%;
-  }
-}
-
 .avatars-btn {
   position: absolute;
   border: none;
@@ -665,20 +650,29 @@ img {
   }
 }
 
+.display {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .display {
+    display: block;
+  }
+}
+
 .avatars-set {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 20px;
   margin-right: -10px;
 }
 
 @media (min-width: 768px) {
   .avatars-set {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -686,16 +680,7 @@ img {
   }
 }
 
-@media (min-width: 1354px) {
-  .avatars-set {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
 .avatars-element {
-  width: calc((100% - 3 * 10px) / 3);
   margin-right: 10px;
 }
 
